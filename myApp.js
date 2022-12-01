@@ -1,11 +1,19 @@
 const express = require('express');
 const app = express();
 
+const https = require('https');
+const fs = require('fs');
+
+const options = {
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem')
+};
+
 var helmet =require('helmet');
 
 app.use(helmet());
 
-
+app.use(helmet.hidePoweredBy());
 
 
 
