@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 # Tell Linguist to exclude HTML files to help Replit language detection.
 *.html linguist-vendored
+=======
+# Auto detect text files and perform LF normalization
+* text=auto
+>>>>>>> 58536b02033ce940aaa216b59cc14d6515f05810
