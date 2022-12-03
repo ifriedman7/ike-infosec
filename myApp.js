@@ -11,8 +11,7 @@ const options = {
 
 var helmet =require('helmet');
 
-app.use(helmet(){
-
+app.use(helmet({
 hidePoweredBy: true,
   frameguard: {         // configure
     action: 'deny'
