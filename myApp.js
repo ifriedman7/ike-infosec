@@ -11,23 +11,25 @@ const options = {
 
 var helmet =require('helmet');
 
-app.use(helmet());
+app.use(helmet(){
 
-app.use(helmet.hidePoweredBy());
-app.use(helmet.frameguard({action: 'deny'}));
-app.use(helmet.xssFilter());
-app.use(helmet.noSniff());
-app.use(helmet.ieNoOpen());
-app.use(helmet.hsts({force: true, maxAge: 7776000000})); // 7776000000ms == 90 days
-app.use(helmet.dnsPrefetchControl());
-app.use(helmet.noCache());
+hidePoweredBy: true,
+  frameguard: {         // configure
+    action: 'deny'
+  },
+xssFilter: true
+noSniff: true
+ieNoOpen: true
+hsts: {force: true, maxAge: 7776000000}, // 7776000000ms == 90 days
+dnsPrefetchControl: true,
+noCache: true
 // Content Security Policy
-app.use(helmet.contentSecurityPolicy({
+contentSecurityPolicy: {
   directives: {
     defaultSrc: ["'self'"],
     scriptSrc: ["'self'", 'trusted-cdn.com'],
-  },
-}));
+  }}
+});
 
 
 
