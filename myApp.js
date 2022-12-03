@@ -19,7 +19,7 @@ app.use(helmet.xssFilter());
 app.use(helmet.noSniff());
 app.use(helmet.ieNoOpen());
 app.use(helmet.hsts({force: true, maxAge: 7776000000})); // 7776000000ms == 90 days
-
+app.use(helmet.dnsPrefetchControl());
 
 
 
