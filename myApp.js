@@ -28,7 +28,7 @@ contentSecurityPolicy: {
     defaultSrc: ["'self'"],
     scriptSrc: ["'self'", 'trusted-cdn.com'],
   }}
-});
+}));
 
 
 
