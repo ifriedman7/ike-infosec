@@ -16,12 +16,12 @@ hidePoweredBy: true,
   frameguard: {         // configure
     action: 'deny'
   },
-xssFilter: true
-noSniff: true
-ieNoOpen: true
+xssFilter: true,
+noSniff: true,
+ieNoOpen: true,
 hsts: {force: true, maxAge: 7776000000}, // 7776000000ms == 90 days
 dnsPrefetchControl: true,
-noCache: true
+noCache: true,
 // Content Security Policy
 contentSecurityPolicy: {
   directives: {
